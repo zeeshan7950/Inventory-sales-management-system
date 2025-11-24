@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
-from app.services.user_service import UserService
-from app.utils.style import apply_main_style
+import app.services.user_service
+import app.utils.style
 
 
 class LoginWindow:
