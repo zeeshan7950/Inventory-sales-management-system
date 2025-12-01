@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
-from app.utils.style import apply_main_style
+# from App.utils.style import apply_main_style
 
 
 class DashboardWindow:
@@ -10,7 +10,7 @@ class DashboardWindow:
         self.master.geometry("800x500")
         self.master.resizable(False, False)
 
-        apply_main_style(self.master)
+        # apply_main_style(self.master)
 
         # ---- TOP BAR ----
         top_frame = tk.Frame(self.master, bg="#2b2b2b", height=60)
@@ -82,7 +82,7 @@ class DashboardWindow:
 
     def logout(self):
         self.master.destroy()
-        from app.views.login import LoginWindow
+        from App.views.login import LoginWindow
         root = tk.Tk()
         LoginWindow(root)
         root.mainloop()
@@ -98,3 +98,7 @@ class DashboardWindow:
             font=("Arial", 18, "bold"),
             bg="white"
         ).pack(pady=50)
+if __name__ == "__main__":
+    root = tk.Tk()
+    DashboardWindow(root)
+    root.mainloop()

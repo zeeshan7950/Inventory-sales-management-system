@@ -1,7 +1,8 @@
 import tkinter as tk
 from tkinter import messagebox
-import app.services.user_service
-import app.utils.style
+
+from App.services.user_service import UserService
+from App.utils.style import apply_main_style
 
 
 class LoginWindow:
@@ -57,7 +58,7 @@ class LoginWindow:
 
     # Placeholder for dashboard window
     def open_dashboard(self):
-        from app.views.dashboard import DashboardWindow
+        from App.views.dashboard import DashboardWindow
         root = tk.Tk()
         DashboardWindow(root)
         root.mainloop()
@@ -66,9 +67,8 @@ class LoginWindow:
     def open_signup_window(self):
         messagebox.showinfo("Signup", "Signup window coming soon!")
 
-
-# For direct testing (optional)
 if __name__ == "__main__":
     root = tk.Tk()
     LoginWindow(root)
     root.mainloop()
+
